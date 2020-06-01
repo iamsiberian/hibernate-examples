@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: local
+  liquibase:
+    enabled: false
+
+---
+spring:
+  profiles: local
+  datasource:
+    url: "dbUrl"
+    jdbcUrl: "dbUrl"
+    driver-class-name: org.postgresql.Driver
+    username: dbUser
+    password: dbPassword
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+    </parent>
+
+    <groupId>com.lineate</groupId>
+    <artifactId>hibernate-examples</artifactId>
+    <version>1.0.0</version>
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <name>${project.groupId}:${project.artifactId}</name>
+
+    <modules>
+        <module>integration-tests</module>
+        <module>migrations-liquibase</module>
+        <module>hibernate-examples-api</module>
+        <module>hibernate-examples-core</module>
+        <module>hibernate-examples-services</module>
+    </modules>
+
+    <properties>
+        <java.version>11</java.version>
+        <rootPath>${project.basedir}</rootPath>
+        <spring.repackage.skip>false</spring.repackage.skip>
+        <json.web.token.version>0.9.1</json.web.token.version>
+        <jakarta.validation.api.version>2.0.2</jakarta.validation.api.version>
+        <liquibase.version>3.8.5</liquibase.version>
+        <test.maven-assembly.version>3.1.0</test.maven-assembly.version>
+        <test.maven-surefire.version>2.22.2</test.maven-surefire.version>
+        <org.apache.maven.plugins.maven-jar-plugin.version>3.0.2</org.apache.maven.plugins.maven-jar-plugin.version>
+        <org.junit.jupiter.version>5.4.2</org.junit.jupiter.version>
+        <test.containers.version>1.14.1</test.containers.version>
+        <hibernate-types.version>2.9.8</hibernate-types.version>
+        <spring-boot-starter-test.version>2.2.6.RELEASE</spring-boot-starter-test.version>
+        <jaxb-api.version>2.3.1</jaxb-api.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-starter-test.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${test.maven-assembly.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${test.maven-surefire.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${org.apache.maven.plugins.maven-jar-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
