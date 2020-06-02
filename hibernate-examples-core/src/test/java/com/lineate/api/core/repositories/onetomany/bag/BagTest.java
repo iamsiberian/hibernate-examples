@@ -16,7 +16,7 @@ import static com.lineate.api.core.domain.onetomany.bag.BagUtils.createPrice;
 import static com.lineate.api.core.domain.onetomany.bag.BagUtils.createProduct;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ContextConfiguration(classes =TestConfigurationForBag.class)
+@ContextConfiguration(classes = TestConfigurationForBag.class)
 public class BagTest extends BaseRepositoryTest {
     @Autowired
     private TestEntityManager entityManager;
