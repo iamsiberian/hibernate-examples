@@ -34,7 +34,7 @@ public class BagTest extends BaseRepositoryTest {
         entityManager.persist(product1);
         price1 = createPrice(product1, new BigDecimal("123.00"));
         product1.getPrices().add(price1);
-        product1.getPrices().add(price1); // No persistent effect!
+        product1.getPrices().add(price1); // No persistent effect
         entityManager.persistAndFlush(price1);
     }
 
@@ -53,6 +53,8 @@ public class BagTest extends BaseRepositoryTest {
         @ToString.Exclude
         @EqualsAndHashCode.Exclude
         then hibernate will not do SELECT on prices
+
+        also there will be no stack overflow error due to recursive dependency
          */
         product.getPrices().add(price);
         priceRepository.save(price);
