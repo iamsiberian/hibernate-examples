@@ -23,12 +23,12 @@ import java.util.Set;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToMany(mappedBy = "products")
-    protected Set<Category> categories = new HashSet<>();
+    private Set<Category> categories = new HashSet<>();
 }

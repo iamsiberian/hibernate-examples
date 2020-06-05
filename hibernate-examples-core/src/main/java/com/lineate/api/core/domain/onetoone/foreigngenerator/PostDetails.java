@@ -28,12 +28,12 @@ public class PostDetails {
                 name = "property", value = "post"
             )
     )
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected String details;
+    private String details;
 
     @OneToOne(optional = false)
     @PrimaryKeyJoinColumn
-    protected Post post;
+    private Post post;
 }

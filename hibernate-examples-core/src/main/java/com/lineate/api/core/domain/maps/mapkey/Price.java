@@ -22,12 +22,12 @@ import java.math.BigDecimal;
 public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @NotNull
-    protected Product product;
+    private Product product;
 
     @NotNull
-    protected BigDecimal amount;
+    private BigDecimal amount;
 }

@@ -18,14 +18,14 @@ import javax.persistence.Table;
 @NoArgsConstructor
 public class Post {
     @Id
-    protected Long id;
+    private Long id;
 
-    protected String text;
+    private String text;
 
     @OneToOne(
         fetch = FetchType.LAZY,
         optional = false
     )
     @PrimaryKeyJoinColumn
-    protected PostDetails postDetails;
+    private PostDetails postDetails;
 }

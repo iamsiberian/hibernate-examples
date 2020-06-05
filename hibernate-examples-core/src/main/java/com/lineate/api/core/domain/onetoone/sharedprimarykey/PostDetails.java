@@ -19,8 +19,8 @@ import javax.persistence.Table;
 public class PostDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected String details;
+    private String details;
 }

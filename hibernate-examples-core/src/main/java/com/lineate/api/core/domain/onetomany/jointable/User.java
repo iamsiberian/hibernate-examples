@@ -22,11 +22,11 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected String username;
+    private String username;
 
     @OneToMany(mappedBy = "buyer")
-    protected Set<Product> boughtProducts = new HashSet<>();
+    private Set<Product> boughtProducts = new HashSet<>();
 }

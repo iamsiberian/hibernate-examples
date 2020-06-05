@@ -19,16 +19,16 @@ import java.util.Set;
 public class Address {
     @NotNull
     @Column(nullable = false)
-    protected String street;
+    private String street;
 
     @NotNull
     @Column(nullable = false)
-    protected String city;
+    private String city;
 
     @OneToMany
     @JoinColumn(
         name = "delivery_address_user_id",
         nullable = false
     )
-    protected Set<Shipment> deliveries = new HashSet<>();
+    private Set<Shipment> deliveries = new HashSet<>();
 }

@@ -26,10 +26,10 @@ import java.util.List;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected String name;
+    private String name;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

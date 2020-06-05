@@ -23,12 +23,12 @@ import java.util.Map;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected String name;
+    private String name;
 
     @MapKey(name = "id")
     @OneToMany(mappedBy = "product")
-    protected Map<Long, Price> prices = new HashMap<>();
+    private Map<Long, Price> prices = new HashMap<>();
 }

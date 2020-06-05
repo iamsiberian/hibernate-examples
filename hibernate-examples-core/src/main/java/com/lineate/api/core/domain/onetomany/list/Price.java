@@ -24,7 +24,7 @@ import java.math.BigDecimal;
 public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
@@ -34,8 +34,8 @@ public class Price {
         updatable = false, insertable = false // Disable writing
     )
     @NotNull
-    protected Product product;
+    private Product product;
 
     @NotNull
-    protected BigDecimal bid;
+    private BigDecimal bid;
 }

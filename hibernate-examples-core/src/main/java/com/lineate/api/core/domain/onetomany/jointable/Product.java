@@ -25,10 +25,10 @@ import javax.persistence.Table;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected String name;
+    private String name;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
@@ -40,5 +40,5 @@ public class Product {
         inverseJoinColumns =
         @JoinColumn(name = "buyer_id")
     )
-    protected User buyer;
+    private User buyer;
 }

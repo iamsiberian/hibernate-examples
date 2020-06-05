@@ -25,9 +25,9 @@ import java.util.Map;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @ManyToMany(cascade = CascadeType.PERSIST)
     @MapKeyJoinColumn(name = "product_id")
@@ -36,5 +36,5 @@ public class Category {
         joinColumns = @JoinColumn(name = "category_id"),
         inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    protected Map<Product, User> productAddedBy = new HashMap<>();
+    private Map<Product, User> productAddedBy = new HashMap<>();
 }

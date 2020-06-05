@@ -18,13 +18,13 @@ import javax.persistence.Table;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     public Long getId() {
         return id;
     }
 
-    protected String name;
+    private String name;
 
-    protected Address shippingAddress;
+    private Address shippingAddress;
 }

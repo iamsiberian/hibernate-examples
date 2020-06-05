@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 }

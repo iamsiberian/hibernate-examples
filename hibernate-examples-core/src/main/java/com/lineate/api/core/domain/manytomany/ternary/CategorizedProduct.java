@@ -23,7 +23,7 @@ public class CategorizedProduct {
         name = "product_id",
         nullable = false, updatable = false
     )
-    protected Product product;
+    private Product product;
 
     @ManyToOne
     @JoinColumn(
@@ -31,12 +31,12 @@ public class CategorizedProduct {
         updatable = false
     )
     @NotNull
-    protected User addedBy;
+    private User addedBy;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(updatable = false)
     @NotNull
-    protected Date addedOn = new Date();
+    private Date addedOn = new Date();
 
     public CategorizedProduct(User addedBy, Product product) {
         this.addedBy = addedBy;

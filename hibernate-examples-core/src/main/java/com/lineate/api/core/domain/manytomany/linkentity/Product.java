@@ -21,10 +21,10 @@ import java.util.Set;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @OneToMany(mappedBy = "product")
-    protected Set<CategorizedProduct> categorizedProducts = new HashSet<>();
+    private Set<CategorizedProduct> categorizedProducts = new HashSet<>();
 }

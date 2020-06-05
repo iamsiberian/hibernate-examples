@@ -24,9 +24,9 @@ import java.util.Set;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
@@ -34,5 +34,5 @@ public class Category {
         joinColumns = @JoinColumn(name = "category_id"),
         inverseJoinColumns = @JoinColumn(name = "product_id")
     )
-    protected Set<Product> products = new HashSet<>();
+    private Set<Product> products = new HashSet<>();
 }

@@ -28,34 +28,34 @@ public class CategorizedProduct {
     @Embeddable
     public static class Id implements Serializable {
         @Column(name = "category_id")
-        protected Long categoryId;
+        private Long categoryId;
 
         @Column(name = "product_id")
-        protected Long productId;
+        private Long productId;
     }
 
     @EmbeddedId
-    protected Id id = new Id();
+    private Id id = new Id();
 
     @Column(updatable = false)
     @NotNull
-    protected String addedBy;
+    private String addedBy;
 
     @Column(updatable = false)
     @NotNull
-    protected Date addedOn = new Date();
+    private Date addedOn = new Date();
 
     @ManyToOne
     @JoinColumn(
         name = "category_id",
         insertable = false, updatable = false)
-    protected Category category;
+    private Category category;
 
     @ManyToOne
     @JoinColumn(
         name = "product_id",
         insertable = false, updatable = false)
-    protected Product product;
+    private Product product;
 
     public CategorizedProduct(
         String addedByUsername,

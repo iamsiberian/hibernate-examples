@@ -23,14 +23,14 @@ import java.util.Set;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @ElementCollection
     @CollectionTable(
         name = "category_product",
         joinColumns = @JoinColumn(name = "category_id")
     )
-    protected Set<CategorizedProduct> categorizedProducts = new HashSet<>();
+    private Set<CategorizedProduct> categorizedProducts = new HashSet<>();
 }

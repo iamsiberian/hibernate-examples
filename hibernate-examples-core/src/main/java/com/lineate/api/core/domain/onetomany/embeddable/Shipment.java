@@ -20,8 +20,8 @@ import java.util.Date;
 public class Shipment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    protected Date createdOn = new Date();
+    private Date createdOn = new Date();
 }

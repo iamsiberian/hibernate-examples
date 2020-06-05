@@ -24,12 +24,12 @@ import java.util.Collection;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
-    public Collection<Price> prices = new ArrayList<>();
+    private Collection<Price> prices = new ArrayList<>();
 }

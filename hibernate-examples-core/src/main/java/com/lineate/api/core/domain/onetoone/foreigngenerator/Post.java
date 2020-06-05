@@ -20,13 +20,13 @@ import javax.persistence.Table;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String text;
+    private String text;
 
     @OneToOne(
         mappedBy = "post",
         cascade = CascadeType.PERSIST
     )
-    protected PostDetails postDetails;
+    private PostDetails postDetails;
 }
