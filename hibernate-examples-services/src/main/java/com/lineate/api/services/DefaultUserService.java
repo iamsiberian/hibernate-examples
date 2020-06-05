@@ -1,8 +1,8 @@
 package com.lineate.api.services;
 
 import com.lineate.api.converters.UserResponseConverter;
-import com.lineate.api.core.domain.onetoone.mapsid.User;
-import com.lineate.api.core.repositories.onetoone.mapsid.UserRepository;
+import com.lineate.api.core.domain.app.User;
+import com.lineate.api.core.repositories.app.UserRepository;
 import com.lineate.api.dto.response.UserResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

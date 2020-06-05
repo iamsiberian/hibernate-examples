@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories("com.lineate.api.core.repositories")
+@EnableJpaRepositories("com.lineate.api.core.repositories.app")
 @EnableTransactionManagement
 public class DatabaseConfiguration {
 
@@ -39,7 +39,7 @@ public class DatabaseConfiguration {
         entityManager.setPersistenceUnitName("test");
 
         entityManager.setPackagesToScan(
-            "com.lineate.api.core.domain"
+            "com.lineate.api.core.domain.app"
         );
 
         entityManager.setJpaDialect(new HibernateJpaDialect());

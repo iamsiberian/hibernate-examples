@@ -1,6 +1,6 @@
 package com.lineate.api.converters;
 
-import com.lineate.api.core.domain.onetoone.mapsid.User;
+import com.lineate.api.core.domain.app.User;
 import com.lineate.api.dto.response.UserResponse;
 import org.springframework.stereotype.Component;
 

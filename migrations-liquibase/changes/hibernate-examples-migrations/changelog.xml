@@ -5,5 +5,4 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
     <include file="2020-01-31-hibernate-examples-add-auth.xml" relativeToChangelogFile="true"/>
-    <include file="2020-05-25-hibernate-examples-user-profile.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

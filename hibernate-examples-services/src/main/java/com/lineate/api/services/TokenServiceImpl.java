@@ -1,8 +1,8 @@
 package com.lineate.api.services;
 
-import com.lineate.api.core.domain.onetoone.mapsid.User;
+import com.lineate.api.core.domain.app.User;
 import com.lineate.api.ex.BadRequestException;
-import com.lineate.api.core.repositories.onetoone.mapsid.UserRepository;
+import com.lineate.api.core.repositories.examples.onetoone.mapsid.UserRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
