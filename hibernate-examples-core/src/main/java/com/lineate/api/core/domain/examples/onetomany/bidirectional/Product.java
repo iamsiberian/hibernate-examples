@@ -22,11 +22,11 @@ import java.util.Set;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String name;
+    private String name;
 
     @OneToMany(mappedBy = "product", // bidirectional association
                fetch = FetchType.LAZY)
-    protected Set<Price> prices = new HashSet<>();
+    private Set<Price> prices = new HashSet<>();
 }

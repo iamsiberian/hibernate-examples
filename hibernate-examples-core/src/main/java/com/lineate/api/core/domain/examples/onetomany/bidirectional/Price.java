@@ -25,14 +25,14 @@ import java.math.BigDecimal;
 public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false)
-    protected Product product;
+    private Product product;
 
     @NotNull
-    protected BigDecimal amount;
+    private BigDecimal amount;
 }
