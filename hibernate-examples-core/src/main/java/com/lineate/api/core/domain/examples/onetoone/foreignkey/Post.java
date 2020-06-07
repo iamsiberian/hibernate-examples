@@ -31,6 +31,6 @@ public class Post {
         optional = false,
         cascade = CascadeType.PERSIST
     )
-    @JoinColumn(unique = true)
+    @JoinColumn(unique = true, name = "post_details_id")
     private PostDetails postDetails;
 }
