@@ -30,7 +30,7 @@ public class Category {
     private String name;
 
     @ManyToMany(cascade = CascadeType.PERSIST)
-    @MapKeyJoinColumn(name = "product_id")
+    @MapKeyJoinColumn(name = "product_id") // productaddedby_key
     @JoinTable(
         name = "category_product",
         joinColumns = @JoinColumn(name = "category_id"),
