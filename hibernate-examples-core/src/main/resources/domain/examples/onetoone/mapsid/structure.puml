@@ -1,0 +1,9 @@
+@startuml
+
+' tables
+!include tables/Post.puml
+!include tables/PostDetails.puml
+
+Post -right- PostDetails
+
+@enduml

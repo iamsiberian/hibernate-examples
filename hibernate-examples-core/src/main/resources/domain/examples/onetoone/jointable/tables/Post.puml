@@ -1,0 +1,8 @@
+@startuml
+
+object Post {
+    ID <<PK>>
+    TEXT
+}
+
+@enduml

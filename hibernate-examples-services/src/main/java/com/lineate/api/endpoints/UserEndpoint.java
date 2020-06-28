@@ -1,7 +1,7 @@
 package com.lineate.api.endpoints;
 
-import com.lineate.api.core.domain.examples.onetoone.mapsid.User;
-import com.lineate.api.core.domain.examples.onetoone.mapsid.UserType;
+import com.lineate.api.core.domain.app.User;
+import com.lineate.api.core.domain.app.UserType;
 import com.lineate.api.dto.response.UserLoginResponse;
 import com.lineate.api.dto.response.UserResponse;
 import com.lineate.api.ex.BadRequestException;

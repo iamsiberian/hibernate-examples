@@ -1,0 +1,9 @@
+@startuml
+
+object Post {
+    ID <<PK>>
+    POST_DETAILS_ID <<FK>> <<UNIQUE>>
+    TEXT
+}
+
+@enduml

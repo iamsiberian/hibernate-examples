@@ -13,20 +13,19 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_profile")
+@Table(name = "post_details")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserProfile {
+public class PostDetails {
     @Id
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "profile_info")
-    private String profileInfo;
+    private String details;
 
     @OneToOne
     @MapsId
-    private User user;
+    private Post post;
 }
