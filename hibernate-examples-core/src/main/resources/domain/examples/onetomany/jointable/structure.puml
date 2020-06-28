@@ -1,0 +1,11 @@
+@startuml
+
+' tables
+!include tables/Product.puml
+!include tables/User.puml
+!include tables/ProductBuyer.puml
+
+Product -right- ProductBuyer
+ProductBuyer -right- "*..1" User
+
+@enduml

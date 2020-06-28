@@ -1,0 +1,9 @@
+@startuml
+
+' tables
+!include tables/User.puml
+!include tables/Shipment.puml
+
+User -right- "0..*" Shipment
+
+@enduml

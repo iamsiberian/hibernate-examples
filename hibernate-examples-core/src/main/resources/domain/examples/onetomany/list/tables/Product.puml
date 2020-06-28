@@ -1,0 +1,8 @@
+@startuml
+
+object Product {
+    ID <<PK>>
+    NAME
+}
+
+@enduml

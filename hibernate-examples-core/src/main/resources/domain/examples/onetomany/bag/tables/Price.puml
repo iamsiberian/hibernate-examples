@@ -1,0 +1,9 @@
+@startuml
+
+object Price {
+    ID <<PK>>
+    PRODUCT_ID <<FK>>
+    BID
+}
+
+@enduml

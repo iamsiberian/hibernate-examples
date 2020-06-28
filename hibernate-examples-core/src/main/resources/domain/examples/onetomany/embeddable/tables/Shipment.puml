@@ -1,0 +1,9 @@
+@startuml
+
+object Shipment {
+    ID <<PK>>
+    DELIVERY_ADRESS_USER_ID <<FK>>
+    CREATEDON
+}
+
+@enduml

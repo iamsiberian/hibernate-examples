@@ -1,0 +1,8 @@
+@startuml
+
+object ProductBuyer {
+    PRODUCT_ID <<PK>> <<FK>>
+    BUYER_ID <<FK>>
+}
+
+@enduml
