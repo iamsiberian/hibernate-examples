@@ -1,0 +1,8 @@
+@startuml
+
+object Category {
+    ID <<PK>>
+    NAME
+}
+
+@enduml

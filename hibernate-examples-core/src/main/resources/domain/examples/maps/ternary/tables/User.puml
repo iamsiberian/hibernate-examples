@@ -1,0 +1,8 @@
+@startuml
+
+object User {
+    ID <<PK>>
+    NAME
+}
+
+@enduml

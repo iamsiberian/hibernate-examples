@@ -1,0 +1,9 @@
+@startuml
+
+' tables
+!include tables/Product.puml
+!include tables/Price.puml
+
+Product -right- "1..*" Price
+
+@enduml
