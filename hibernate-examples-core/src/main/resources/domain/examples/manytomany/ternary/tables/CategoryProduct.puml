@@ -1,0 +1,11 @@
+@startuml
+
+object CategoryProduct {
+    CATEGORY_ID <<PK>> <<FK>>
+    PRODUCT_ID <<PK>> <<FK>>
+    USER_ID <<FK>>
+    ADDEDBY
+    ADDEDON
+}
+
+@enduml

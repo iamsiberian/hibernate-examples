@@ -1,0 +1,8 @@
+@startuml
+
+object ProductCategory {
+    CATEGORY_ID <<PK>> <<FK>>
+    PRODUCT_ID <<PK>> <<FK>>
+}
+
+@enduml

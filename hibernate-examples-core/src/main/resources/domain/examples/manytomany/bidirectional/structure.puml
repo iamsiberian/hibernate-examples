@@ -1,0 +1,11 @@
+@startuml
+
+' tables
+!include tables/Product.puml
+!include tables/Category.puml
+!include tables/ProductCategory.puml
+
+Category -right- "1..*" ProductCategory
+ProductCategory -right- "*..1" Product
+
+@enduml
